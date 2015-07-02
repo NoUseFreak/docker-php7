@@ -1,5 +1,7 @@
 FROM ubuntu-upstart:14.04
 
+MAINTAINER Dries De Peuter <dries@nousefreak.be>
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C \
  	&& echo "deb http://ppa.launchpad.net/nginx/development/ubuntu trusty main" > /etc/apt/sources.list.d/nginx-development.list
 
@@ -103,3 +105,5 @@ COPY conf/php.pool.conf /usr/local/php/etc/php-fpm.d/www.conf
 ENV PATH $PATH:/usr/local/php/bin
 
 WORKDIR /var/www/html
+
+EXPOSE 80
