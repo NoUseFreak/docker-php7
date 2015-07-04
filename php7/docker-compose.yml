@@ -1,0 +1,6 @@
+app:
+    image: php7
+    ports:
+        - 80:80
+    volumes:
+        - /Users/driesdepeuter/Projects/Docker/docker-php7:/var/www/html
